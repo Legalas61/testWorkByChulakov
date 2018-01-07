@@ -1,0 +1,495 @@
+/*
+
+Add font 23
+Menu 		 32
+Header 	 94
+Payment information 331
+Select option reset 349
+
+Media
+	768px	 - 358
+	582px  - 582
+	425px	 - 478
+
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Add font*/
+
+@font-face {
+	src: url(../font/OpenSans-Bold.ttf);
+	font-family: OpenSans;
+}
+
+body {
+	background: #101114;
+}
+
+/* Menu */
+
+aside {
+	background: #1F2229;
+	width: 30%;
+	float: left;
+}
+
+.container {
+	max-width: 870px;
+	margin: 87px auto;
+}
+
+.aside_logo {
+	margin: 67px 69px 59px 20%;
+}
+
+.menu_btn {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	background: url("../img/menu.svg") no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	z-index: 10;
+	position: fixed;
+	display: none;
+}
+
+menu {
+	list-style: none;
+}
+
+menu li {
+	padding: 26px 0 26px 0;
+	cursor: pointer;
+	border-top: 1px solid #20232B;
+}
+
+menu a {
+	margin-left: 30px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: "OpenSans", arial, sans-serif;
+}
+
+menu a:hover {
+	color: #00AEEF;
+}
+
+.menu_active {
+	background: #2A2D37;
+}
+
+.menu_other {
+	background: #191C24;
+}
+
+/* End Menu */
+
+/* Header */
+
+header {
+	background: #00AEEF;
+	height: 160px;
+}
+
+header h1 {
+	padding-bottom: 20px;
+	font-size: 35px;
+	font-family: "OpenSans", arial, sans-serif;
+}
+
+.header_container {
+	padding-top: 50px;
+	padding-left: 30px;
+	margin-left: 30%;
+	width: 450px;
+	color: #193945;
+	font-family: arial, sans-serif;
+	font-size: 14px;
+}
+
+/* End Header */
+
+/* Payment information */
+
+.info_pay {
+	background: #fff;
+	padding-top: 50px;
+	margin-left: 30%;
+	padding-left: 30px;
+	height: 570px;
+}
+
+.info_number_title,
+.info_sum_title {
+	color: #8494AB;
+	width: 133px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.info_title {
+	font-size: 16px;
+	margin-bottom: 27px;
+	display: inline-block;
+	color: #8494AB;
+}
+
+.info_number,
+.info_sum {
+	color: #1f2229;
+	font-size: 16px;
+}
+
+.info_card {
+	margin-top: 35px;
+	height: 395px;
+}
+
+.bank_card_title {
+	font-size: 22px;
+	font-family: "OpenSans", arial, sans-serif;
+	color: #1f2229;
+	margin-bottom: 25px;
+	display: inline-block;
+}
+
+.front_side_card {
+	z-index: 2;
+	width: 350px;
+}
+
+.info_card_owner,
+.front_side_card,
+.back_site_card,
+.info_card_number input,
+.info_card_month,
+.info_card_year,
+.back_site_card_cvv {
+	border: 1px solid #E4E9EE;
+}
+
+.front_side_card,
+.back_site_card {
+	background: #F7F8F8;
+	border-radius: 10px;
+	position: relative;
+}
+
+.info_card_number_title,
+.info_card_life {
+	color: #8494ab;
+	font-family: arial, sans-serif;
+	font-size: 16px;
+	margin: 16px 0 10px 15px;
+	display: inline-block;
+	width: 100%;
+}
+
+.info_card_number {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.info_card_number input {
+	display: inline-block;
+	width: 65px;
+	height: 40px;
+	margin-right: 10px;
+}
+
+.info_card_month {
+	width: 70px;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
+.info_card_year {
+	width: 85px;
+}
+
+.info_card_month,
+.info_card_year {
+	height: 40px;
+	font-size: 16px;
+	font-family: arial, sans-serif;
+}
+
+.info_card_owner {
+	margin: 12px 0 15px 15px;
+	width: 300px;
+	height: 40px;
+}
+
+.info_card_data {
+	position: relative;
+	display: inline-block;
+}
+
+.info_container_select1 {
+	float: left;
+}
+
+.info_container_select1::after,
+.info_container_select2::after {
+	content: "";
+	background: url(../img/bottom.svg) no-repeat;
+	background-size: contain;
+	position: absolute;
+	z-index: 1;
+	width: 30px;
+	height: 23px;
+	pointer-events: none;
+	box-sizing: border-box;
+	top: 54px;
+}
+
+.info_container_select1::after {
+	right: 140px;
+}
+
+.info_container_select2::after {
+	right: 235px;
+}
+
+select {
+	padding-right: 25px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.info_card_owner::placeholder {
+	padding-left: 15px;
+}
+
+.back_site_card {
+	bottom: 225px;
+	left: 135px;
+	height: 240px;
+	width: 370px;
+}
+
+.back_site_card_line {
+	width: 100%;
+	height: 45px;
+	background: #E8ECF1;
+	margin-top: 20px;
+}
+
+.back_site_card_cvv_title {
+	text-align: right;
+	width: 100%;
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	color: #8494ab;
+	margin-left: -10px;
+	margin-top: 20px;
+	float: left;
+}
+
+.back_site_card_cvv {
+	height: 40px;
+	width: 130px;
+	margin-top: 5px;
+	margin-left: 230px;
+}
+
+.back_site_card_icon_help {
+	background: url(../img/info.svg) no-repeat;
+	background-size: contain;
+	width: 25px;
+	height: 25px;
+	display: block;
+	float: right;
+	position: relative;
+	bottom: 35px;
+	right: 15px;
+}
+
+.buttom {
+	width: 170px;
+	border: none;
+	padding: 15px 0;
+	text-align: center;
+	color: #fff;
+	border-radius: 3px;
+	position: absolute;
+	top: 745px;
+	cursor: pointer;
+	font-family: "OpenSans", arial, sans-serif;
+	background: rgb(162, 197, 0);
+	background: -webkit-linear-gradient(rgb(162, 197, 0) 0%, rgb(131, 178, 0) 99%);
+	background: -o-linear-gradient(rgb(162, 197, 0) 0%, rgb(131, 178, 0) 99%);
+	background: linear-gradient(rgb(162, 197, 0) 0%, rgb(131, 178, 0) 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a2c500', endColorstr='#83b200', GradientType=0);
+}
+
+/* Payment information */
+
+.provision {
+	margin-left: -1.9rem;
+	background: #373C43;
+	color: #7f8591;
+	font-size: 12px;
+	font-family: arial, sans-serif;
+	padding-bottom: 30px;
+	padding-top: 20px;
+	margin-bottom: 10px;
+}
+
+.provision p {
+	margin: 5px 30px 20px 30px;
+	line-height: 1.2rem;
+}
+
+.error {
+	border-color: red !important;
+}
+
+/* Select option reset */
+
+select::-ms-expand {
+	display: none;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* /select option reset */
+
+@media only screen and (max-width:768px) {
+	/* Menu */
+	aside {
+		width: 197px;
+	}
+	.aside_logo {
+		margin: 67px 63px 59px 15px;
+	}
+	.header_container {
+		text-align: center;
+		padding-top: 20px;
+		margin-left: auto;
+	}
+	menu a {
+		font-size: 14px;
+	}
+	/* /Menu	*/
+	.container {
+		margin: 0 auto;
+	}
+	/* Payment information	*/
+	.info_pay {
+		margin-left: 197px;
+		height: auto;
+	}
+	.info_card {
+		height: auto;
+		margin-bottom: 10px;
+	}
+	.front_side_card,
+	.back_site_card {
+		position: inherit;
+	}
+	.back_site_card {
+		margin-top: 10px;
+		height: 200px;
+		width: 350px;
+	}
+	.back_site_card_cvv {
+		margin-top: 5px;
+		margin-left: 210px;
+	}
+	.buttom {
+		position: inherit;
+		padding: 2% 5%;
+		margin-top: 10px;
+		display: block;
+	}
+	.provision p {
+		margin-bottom: 0;
+	}
+	/* /Payment information	*/
+}
+
+/* End 768px*/
+
+@media only screen and (max-width:582px) {
+	/* Menu */
+	aside {
+		display: none;
+		position: fixed;
+		z-index: 99;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		padding-top: 20%;
+		padding-bottom: 203px;
+	}
+	.aside_logo {
+		margin: 0 auto;
+	}
+	.menu_btn {
+		display: block;
+		z-index: 100;
+	}
+	/* /Menu */
+	header {
+		height: auto;
+	}
+	.header_container {
+		text-align: center;
+		width: auto;
+		padding-left: 0;
+		padding-bottom: 2%;
+	}
+	/* Payment information	*/
+	.info_pay {
+		padding-top: 25px;
+		margin-left: 0;
+	}
+	.back_site_card {
+		margin-top: 10px;
+	}
+	.front_side_card,
+	.back_site_card {
+		width: 80%;
+	}
+	.back_site_card_cvv {
+		margin-top: 5px;
+		width: 36%;
+		margin-left: 61%;
+	}
+	.info_container_select1::after {
+		left: 55px;
+	}
+	.info_container_select2::after {
+		right: 40px;
+	}
+	.buttom {
+		width: 35%;
+	}
+	.info_card_number input {
+		width: 20%;
+		height: 30px;
+		margin-right: 1.25%;
+	}
+	.info_card_owner {
+		width: 80%;
+	}
+	/* /Payment information	*/
+}
+
+/* End 582px*/
